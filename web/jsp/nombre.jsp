@@ -1,7 +1,7 @@
 <%-- 
-    Document   : Selecciona
-    Created on : 12-dic-2012, 16:52:01
-    Author     : al036049
+    Document   : nombre
+    Created on : 12-dic-2012, 17:16:47
+    Author     : al036215
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,7 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1><a href="nombre.jsp?">nombre</a> </h1>
-        
+         <form action="Servlet" method="get">
+            ingrese su nombre y apellido: <input type="text" size="25">
+            
+        </form>
     </body>
 </html>
