@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1><a href=""</h1>
+        <h4><a href="/Ejercicio4/jsp/nombre.jsp">Nombre</a></h4>
+        <h4><a href="/Ejercicio4/jsp/numero.jsp">Numero</a></h4>
     </body>
 </html>
