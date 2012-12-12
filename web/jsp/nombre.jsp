@@ -13,7 +13,7 @@
     </head>
     <body>
          <form action="Servlet" method="get">
-            ingrese su nombre: <input type="text" size="25">
+            ingrese su nombre y apellido: <input type="text" size="25">
             
         </form>
     </body>
