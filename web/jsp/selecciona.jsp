@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Selecciona</title>
     </head>
     <body>
         <h4><a href="/Ejercicio4/jsp/nombre.jsp">Nombre</a></h4>
