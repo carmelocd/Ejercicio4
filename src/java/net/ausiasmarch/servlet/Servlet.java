@@ -37,16 +37,20 @@ public class Servlet extends HttpServlet {
         try {
             String user = request.getParameter("usuario");
             String pass = request.getParameter("password");
-            
-            /* TODO output your page here. You may use following sample code. */
-            if(user.equals(usuario) && pass.equals(password)){
-                RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/jsp/selecciona.jsp");
-                 reqDispatcher.forward(request,response);
-            }else{
-                RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/index.jsp");
-                 reqDispatcher.forward(request,response);
+            String action = request.getParameter("action");
+            switch (action) {
+                case "login":
+                    /* TODO output your page here. You may use following sample code. */
+                    if (user.equals(usuario) && pass.equals(password)) {
+                        RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/jsp/selecciona.jsp");
+                        reqDispatcher.forward(request, response);
+                    } else {
+                        RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/index.jsp");
+                        reqDispatcher.forward(request, response);
+                    }
+                    break;
             }
-        } finally {            
+        } finally {
             out.close();
         }
     }
@@ -64,7 +68,7 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-          request.getRequestDispatcher("jsp/nombre.jsp").forward(request, response);
+        processRequest(request, response);
     }
 
     /**
