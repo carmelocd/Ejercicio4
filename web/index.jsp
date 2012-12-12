@@ -12,6 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <form action="Servlet">
+            Usuario:<input type="text" name="usuario" value="" size="20" />
+            <br/>
+            Password:<input type="password" name="password" value="" size="20" />
+            <br/>
+            <br/>
+            <input type="submit" value="Enviar" name="enviar" />
+        </form>
     </body>
 </html>
