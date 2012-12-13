@@ -13,7 +13,6 @@
     </head>
     <body>
        <%String nombre =(String) request.getAttribute("nombre"); %>
-       <h1>Hola <%out.println(nombre);%>  </h1>
-   
+       <h1>Hola <%out.println(nombre);%>  </h1>   
     </body>
 </html>

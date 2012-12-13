@@ -39,7 +39,6 @@ public class Servlet extends HttpServlet {
             String pass = request.getParameter("password");
             String action = request.getParameter("action");
 
-
             switch (action) {
                 case "login":
                     /* TODO output your page here. You may use following sample code. */
@@ -54,11 +53,8 @@ public class Servlet extends HttpServlet {
 
                 case "saludo":
                     String nombre = request.getParameter("nombre");
-                   // out.println("hola: " + nombre);
-
-                      request.setAttribute("nombre", nombre);
-                     getServletContext().getRequestDispatcher("/jsp/saludo.jsp").forward(request, response);
-                     System.out.println(nombre);
+                    request.setAttribute("nombre", nombre);
+                    getServletContext().getRequestDispatcher("/jsp/saludo.jsp").forward(request, response);
                     break;
             }
         } finally {
