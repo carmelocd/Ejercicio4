@@ -13,11 +13,9 @@
     </head>
     <body>
         <form action="/Ejercicio4/Servlet">
-            Nombre:<input type="text" name="nombre" value="" size="20" />
-            <br/>
-            <br/>
+            Nombre: <input type="text" size="20" name="nombre"><br>         
            <input type="hidden" name="action" value="saludo">
-            <input type="submit" value="Enviar" name="enviar" />
+             <button type="submit">Enviar</button>
             
         </form>
     </body>
