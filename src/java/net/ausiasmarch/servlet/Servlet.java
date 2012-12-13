@@ -30,29 +30,39 @@ public class Servlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String usuario = "javier";
-        String password = "javier";
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try {
-            String user = request.getParameter("usuario");
-            String pass = request.getParameter("password");
-            String action = request.getParameter("action");
-            switch (action) {
-                case "login":
-                    /* TODO output your page here. You may use following sample code. */
-                    if (user.equals(usuario) && pass.equals(password)) {
-                        RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/jsp/selecciona.jsp");
-                        reqDispatcher.forward(request, response);
-                    } else {
-                        RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/index.jsp");
-                        reqDispatcher.forward(request, response);
-                    }
-                    break;
-            }
-        } finally {
-            out.close();
-        }
+         String usuario = "javier";
+         String password = "javier";
+         response.setContentType("text/html;charset=UTF-8");
+         PrintWriter out = response.getWriter();
+         try {
+         String user = request.getParameter("usuario");
+         String pass = request.getParameter("password");
+         String action = request.getParameter("action");
+         String nombre = request.getParameter("nombre");
+
+         switch (action) {
+         case "login":
+        /* TODO output your page here. You may use following sample code. */
+          if (user.equals(usuario) && pass.equals(password)) {
+         RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/jsp/selecciona.jsp");
+         reqDispatcher.forward(request, response);
+         } else {
+         RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/index.jsp");
+         reqDispatcher.forward(request, response);
+         }
+         break;
+
+         case "saludo":
+           //  System.out.println();
+
+        request.setAttribute("nombre", nombre);
+         getServletContext().getRequestDispatcher("/jsp/saludo.jsp").forward(request, response);
+          System.out.println(nombre);
+         break;
+         }
+         } finally {
+         out.close();
+         }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -68,7 +78,8 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+         processRequest(request, response);
+     
     }
 
     /**

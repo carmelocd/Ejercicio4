@@ -16,8 +16,10 @@
             Usuario:<input type="text" name="usuario" value="" size="20" />
             <br/>
             Password:<input type="password" name="password" value="" size="20" />
+            
             <br/>
             <br/>
+            <input type="hidden" name="action" value="login">
             <input type="submit" value="Enviar" name="enviar" />
             
         </form>

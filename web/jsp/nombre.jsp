@@ -12,8 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-         <form action="Servlet" method="get">
-            ingrese su nombre y apellido: <input type="text" size="25">
+        <form action="/Ejercicio4/Servlet">
+            Nombre:<input type="text" name="nombre" value="" size="20" />
+            <br/>
+            <br/>
+           <input type="hidden" name="action" value="saludo">
+            <input type="submit" value="Enviar" name="enviar" />
             
         </form>
     </body>
