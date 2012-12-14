@@ -13,19 +13,16 @@
     </head>
     <body>
         
+      
         
-        <form action="Ejercicio4/Servlet">
-        Ponga un numero: <input type="text" name="numero"><br>
-        <input type="hidden" name="action" value="numero">
+        <form action="/Ejercicio4/Servlet">
+        Ponga un numero: <input type="text" name="numero"></input>
+        <br>
+          
+        <input type="hidden" name="action" value="numero" />
         <button type="sumit">Enviar</button>
-            <!%
-        numero = numeroEntero;
-        for(i=0,i<=numero,i++){
-        return i;
-        }
-        out.pritnl(i);
         
-        %> 
+        
        </form>
        
     </body>

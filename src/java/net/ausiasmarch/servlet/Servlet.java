@@ -56,18 +56,17 @@ public class Servlet extends HttpServlet {
                     request.setAttribute("nombre", nombre);
                     getServletContext().getRequestDispatcher("/jsp/saludo.jsp").forward(request, response);
                     break;
-                    
-                     case "numero":
+
+                case "numero":
                     /* TODO output your page here. You may use following sample code. */
-                    String numero=request.getParameter("numero");
-                    int numeroEntero= Integer.parseInt(numero);
-                    request.setAttribute(numero, numeroEntero);
-                    
-                       
-                        break;
-            } 
-            
-            
+                    String numero = request.getParameter("numero");
+                    int numeroEntero = Integer.parseInt(numero);
+                    request.setAttribute("numero", numeroEntero);
+                    getServletContext().getRequestDispatcher("/jsp/contar.jsp").forward(request, response);
+                    break;
+            }
+
+
         } finally {
             out.close();
         }
