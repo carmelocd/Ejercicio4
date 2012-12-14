@@ -12,8 +12,18 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form>
-        Ponga un numero: <input type="text" name="numero"><br>
+        
+      
+        
+        <form action="/Ejercicio4/Servlet">
+        Ponga un numero: <input type="text" name="numero"></input>
+        <br>
+          
+        <input type="hidden" name="action" value="numero" />
+        <button type="sumit">Enviar</button>
+        
+        
        </form>
+       
     </body>
 </html>
