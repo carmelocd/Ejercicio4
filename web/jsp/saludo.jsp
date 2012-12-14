@@ -12,7 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-       <%String nombre =(String) request.getAttribute("nombre"); %>
-       <h1>Hola <%out.println(nombre);%>  </h1>   
+       
     </body>
 </html>

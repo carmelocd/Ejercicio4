@@ -30,8 +30,8 @@ public class Servlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String usuario = "javier";
-        String password = "javier";
+        String usuario = "java";
+        String password = "java";
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
@@ -51,11 +51,7 @@ public class Servlet extends HttpServlet {
                     }
                     break;
 
-                case "saludo":
-                    String nombre = request.getParameter("nombre");
-                    request.setAttribute("nombre", nombre);
-                    getServletContext().getRequestDispatcher("/jsp/saludo.jsp").forward(request, response);
-                    break;
+           
                     
                     
             }
