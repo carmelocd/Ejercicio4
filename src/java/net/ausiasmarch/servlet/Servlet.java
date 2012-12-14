@@ -49,7 +49,18 @@ public class Servlet extends HttpServlet {
                         reqDispatcher.forward(request, response);
                     }
                     break;
-            }
+                    
+                     case "numero":
+                    /* TODO output your page here. You may use following sample code. */
+                    String numero=request.getParameter("numero");
+                    int numeroEntero= Integer.parseInt(numero);
+                    request.setAttribute(numero, numeroEntero);
+                    
+                       
+                        break;
+            } 
+            
+            
         } finally {
             out.close();
         }
