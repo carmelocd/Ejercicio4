@@ -38,6 +38,7 @@ public class Servlet extends HttpServlet {
             String user = request.getParameter("usuario");
             String pass = request.getParameter("password");
             String action = request.getParameter("action");
+
             switch (action) {
                 case "login":
                     /* TODO output your page here. You may use following sample code. */
@@ -48,6 +49,12 @@ public class Servlet extends HttpServlet {
                         RequestDispatcher reqDispatcher = getServletConfig().getServletContext().getRequestDispatcher("/index.jsp");
                         reqDispatcher.forward(request, response);
                     }
+                    break;
+
+                case "saludo":
+                    String nombre = request.getParameter("nombre");
+                    request.setAttribute("nombre", nombre);
+                    getServletContext().getRequestDispatcher("/jsp/saludo.jsp").forward(request, response);
                     break;
             }
         } finally {
@@ -69,6 +76,7 @@ public class Servlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+
     }
 
     /**
