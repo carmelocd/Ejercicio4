@@ -50,6 +50,10 @@ public class Servlet extends HttpServlet {
                         reqDispatcher.forward(request, response);
                     }
                     break;
+                case "culo":
+                    String culo="culo";
+                    break;
+                    
 
            
                     
